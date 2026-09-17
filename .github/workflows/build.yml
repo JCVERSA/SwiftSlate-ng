@@ -1,0 +1,115 @@
+name: Build APK
+
+# Builds an installable preview APK without release-signing secrets.
+# The preview app is separate from the stable app and is signed with
+# the runner's temporary debug key.
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches: [main]
+    paths:
+      - 'app/**'
+      - 'build.gradle.kts'
+      - 'settings.gradle.kts'
+      - 'gradle/**'
+      - 'gradle.properties'
+      - '.github/workflows/**'
+
+  pull_request:
+    branches: [main]
+    paths:
+      - 'app/**'
+      - 'build.gradle.kts'
+      - 'settings.gradle.kts'
+      - 'gradle/**'
+      - 'gradle.properties'
+      - '.github/workflows/**'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  GRADLE_OPTS: -Dorg.gradle.jvmargs="-Xmx3g -Dfile.encoding=UTF-8 -XX:+UseG1GC"
+
+jobs:
+  apk:
+    name: Build installable APK
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@dd06d9cba3e5552c54d9f8ea23572deb30010f7c # v6.0.0
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@9c971963bec38e04b3d30dcc455b5382be2fdbfb # v6.3.0
+        with:
+          cache-cleanup: on-success
+          cache-read-only: ${{ github.event_name == 'pull_request' }}
+
+      - name: Build preview APK
+        shell: bash
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          if [ -n "$PR_NUMBER" ]; then
+            LABEL="preview-pr${PR_NUMBER}"
+          else
+            LABEL="manual"
+          fi
+
+          ./gradlew assemblePreview \
+            --parallel \
+            --build-cache \
+            --no-daemon \
+            --configuration-cache-problems=warn \
+            -PversionCode="${GITHUB_RUN_NUMBER}" \
+            -PversionName="${LABEL}-${GITHUB_SHA:0:7}"
+
+          echo "APK_LABEL=$LABEL" >> "$GITHUB_ENV"
+
+      - name: Verify APK exists
+        shell: bash
+        run: |
+          test -f app/build/outputs/apk/preview/app-preview.apk
+
+      - name: Rename APK
+        shell: bash
+        run: |
+          mv app/build/outputs/apk/preview/app-preview.apk \
+            "app/build/outputs/apk/preview/SwiftSlate-${APK_LABEL}-${GITHUB_SHA:0:7}.apk"
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: SwiftSlate-${{ env.APK_LABEL }}
+          path: app/build/outputs/apk/preview/SwiftSlate-*.apk
+          retention-days: 14
+
+      - name: Explain how to use it
+        shell: bash
+        run: |
+          {
+            echo "### Installable APK ready"
+            echo
+            echo "The APK installs as a separate app:"
+            echo "\`com.jcversa.swiftslate.preview\`"
+            echo
+            echo "It will not touch the stable app, its API keys, its commands,"
+            echo "or its accessibility-service setting."
+            echo
+            echo "Download it from the Artifacts section of this run."
+            echo "Then enable SwiftSlate Preview under Android Accessibility settings."
+          } >> "$GITHUB_STEP_SUMMARY"

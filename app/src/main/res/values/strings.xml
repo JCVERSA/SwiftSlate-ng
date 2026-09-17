@@ -1,0 +1,347 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">SwiftSlate</string>
+    <string name="accessibility_service_label">SwiftSlate Assistant</string>
+    <string name="accessibility_service_desc">Provides system-wide AI text replacements when trigger commands are typed.</string>
+    <string name="quick_tile_api_backup" tools:ignore="MissingTranslation">Encrypted API backup</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_title">Dashboard</string>
+    <string name="service_status_active">Active</string>
+    <string name="service_status_inactive">Inactive</string>
+    <string name="service_enable">Enable</string>
+    <string name="dashboard_api_keys_title">API Keys</string>
+    <string name="dashboard_keys_configured">%1$d keys configured</string>
+    <string name="dashboard_add_key_hint">Add an API key to get started.</string>
+    <string name="dashboard_monthly_requests">This Month</string>
+    <string name="dashboard_favorite_command">Top Command</string>
+    <string name="dashboard_no_data">—</string>
+    <string name="dashboard_last_7_days">Last 7 Days</string>
+
+    <!-- Keys -->
+    <string name="keys_title">API Keys</string>
+    <string name="keys_api_key_label">API Key</string>
+    <string name="keys_testing">Testing…</string>
+    <string name="keys_add_key">Add Key</string>
+    <string name="keys_valid_added">Valid key added!</string>
+    <string name="keys_already_added">This key has already been added</string>
+    <string name="keys_validation_failed">Validation failed</string>
+    <string name="keys_keystore_error">Secure key storage is unavailable on this device. Keys cannot be saved.</string>
+    <string name="keys_custom_endpoint_required">Set the endpoint URL in Settings before adding a key for the Custom provider</string>
+    <string name="keys_get_api_key">Get your %1$s API key ↗</string>
+    <string name="keys_empty">No API keys added</string>
+
+    <!-- Commands -->
+    <string name="commands_title">Commands</string>
+    <string name="commands_add_custom_title">Add Custom Command</string>
+    <string name="commands_trigger_label">Trigger (e.g., %1$scode)</string>
+    <string name="commands_prompt_label">Prompt (e.g., Rewrite as a poem)</string>
+    <string name="commands_add_command">Add Command</string>
+    <string name="commands_delete_command">Delete</string>
+    <string name="commands_edit_command">Edit</string>
+    <string name="commands_save_command">Save Command</string>
+    <string name="commands_cancel">Cancel</string>
+    <string name="commands_type_ai">AI</string>
+    <string name="commands_type_replacer">Local</string>
+    <string name="commands_replacement_label">Replacement Text (e.g., myemail@example.com)</string>
+    <string name="commands_built_in">Built-in</string>
+    <string name="commands_error_prefix">Trigger must start with \'%1$s\'</string>
+    <string name="commands_error_duplicate">A command with this trigger already exists</string>
+    <string name="commands_error_conflict">Conflicts with existing command \'%1$s\' — one trigger is a prefix of the other</string>
+    <string name="commands_error_empty_trigger">Trigger must have a name after the prefix</string>
+
+    <string name="commands_alias_label" tools:ignore="MissingTranslation">Aliases (optional)</string>
+    <string name="commands_alias_placeholder" tools:ignore="MissingTranslation">e.g. %1$scorrect</string>
+    <string name="commands_alias_add" tools:ignore="MissingTranslation">Add alias</string>
+    <string name="commands_alias_update" tools:ignore="MissingTranslation">Save alias</string>
+    <string name="commands_alias_edit" tools:ignore="MissingTranslation">Edit alias</string>
+    <string name="commands_alias_remove" tools:ignore="MissingTranslation">Remove alias</string>
+    <string name="commands_aliases_heading" tools:ignore="MissingTranslation">Aliases</string>
+    <string name="commands_alias_error_prefix" tools:ignore="MissingTranslation">Alias must start with \'%1$s\'</string>
+    <string name="commands_alias_error_duplicate" tools:ignore="MissingTranslation">This alias is already used</string>
+    <string name="commands_alias_error_limit" tools:ignore="MissingTranslation">You can add up to five aliases</string>
+    <string name="commands_alias_error_invalid" tools:ignore="MissingTranslation">Alias is invalid or too long</string>
+    <string name="commands_preview_input_label" tools:ignore="MissingTranslation">Example text to test</string>
+    <string name="commands_preview_default_input" tools:ignore="MissingTranslation">This is an example sentence to transform.</string>
+    <string name="commands_preview_button" tools:ignore="MissingTranslation">Test command</string>
+    <string name="commands_preview_loading" tools:ignore="MissingTranslation">Testing…</string>
+    <string name="commands_preview_output" tools:ignore="MissingTranslation">Preview result</string>
+    <string name="commands_preview_unavailable" tools:ignore="MissingTranslation">The command could not be tested. Check that a valid API key is configured.</string>
+    <string name="commands_preview_timeout" tools:ignore="MissingTranslation">The test timed out. Try again.</string>
+
+
+    <string name="onboarding_title" tools:ignore="MissingTranslation">Set up SwiftSlate</string>
+    <string name="onboarding_progress" tools:ignore="MissingTranslation">Step %1$d of %2$d</string>
+    <string name="onboarding_provider_title" tools:ignore="MissingTranslation">Choose your provider</string>
+    <string name="onboarding_provider_message" tools:ignore="MissingTranslation">This provider will handle your AI commands. You can change it later in Settings.</string>
+    <string name="onboarding_model_title" tools:ignore="MissingTranslation">Choose your model</string>
+    <string name="onboarding_model_message" tools:ignore="MissingTranslation">Select the model that will process your commands. You can change it later in Settings.</string>
+    <string name="onboarding_key_title" tools:ignore="MissingTranslation">Add your API key</string>
+    <string name="onboarding_key_message" tools:ignore="MissingTranslation">Add a %1$s API key. It is stored securely on this device and never displayed after validation.</string>
+    <string name="onboarding_key_validate" tools:ignore="MissingTranslation">Validate and save key</string>
+    <string name="onboarding_key_validating" tools:ignore="MissingTranslation">Validating…</string>
+    <string name="onboarding_key_placeholder" tools:ignore="MissingTranslation">Enter your API key</string>
+    <string name="onboarding_key_saved_title" tools:ignore="MissingTranslation">API key saved</string>
+    <string name="onboarding_key_saved_message" tools:ignore="MissingTranslation">Your %1$s key is stored securely on this device.</string>
+    <string name="onboarding_key_edit" tools:ignore="MissingTranslation">Edit key</string>
+    <string name="onboarding_key_success" tools:ignore="MissingTranslation">Key validated and saved securely.</string>
+    <string name="onboarding_key_failed" tools:ignore="MissingTranslation">The key could not be validated. Check it and try again.</string>
+    <string name="onboarding_accessibility_title" tools:ignore="MissingTranslation">Enable the assistant</string>
+    <string name="onboarding_accessibility_message" tools:ignore="MissingTranslation">Android needs the SwiftSlate accessibility service to detect your command triggers and replace text.</string>
+    <string name="onboarding_open_accessibility" tools:ignore="MissingTranslation">Open Android accessibility settings</string>
+    <string name="onboarding_accessibility_ready" tools:ignore="MissingTranslation">SwiftSlate assistant is enabled.</string>
+    <string name="onboarding_accessibility_waiting" tools:ignore="MissingTranslation">Enable SwiftSlate, then return here.</string>
+    <string name="onboarding_test_title" tools:ignore="MissingTranslation">Test your setup</string>
+    <string name="onboarding_test_message" tools:ignore="MissingTranslation">Run one safe example request to verify the provider, key, model and assistant setup.</string>
+    <string name="onboarding_test_button" tools:ignore="MissingTranslation">Run setup test</string>
+    <string name="onboarding_test_failed" tools:ignore="MissingTranslation">The setup test failed. Check your connection and configuration, then try again.</string>
+    <string name="onboarding_back" tools:ignore="MissingTranslation">Back</string>
+    <string name="onboarding_next" tools:ignore="MissingTranslation">Continue</string>
+    <string name="onboarding_finish" tools:ignore="MissingTranslation">Finish setup</string>
+    <string name="onboarding_later" tools:ignore="MissingTranslation">Continue without finishing</string>
+    <string name="dashboard_onboarding_reminder" tools:ignore="MissingTranslation">Your setup is incomplete. You can finish it in Settings.</string>
+    <string name="dashboard_onboarding_dismiss" tools:ignore="MissingTranslation">Dismiss</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_provider_title">Model Provider</string>
+    <string name="settings_provider_gemini">Google Gemini</string>
+    <string name="settings_provider_groq">Groq</string>
+    <string name="settings_provider_nvidia" tools:ignore="MissingTranslation">NVIDIA NIM</string>
+    <string name="settings_provider_openrouter" tools:ignore="MissingTranslation">OpenRouter</string>
+    <string name="settings_provider_deepseek" tools:ignore="MissingTranslation">DeepSeek</string>
+    <string name="settings_provider_custom">Custom (OpenAI Compatible)</string>
+    <string name="settings_model_title">Model</string>
+    <string name="settings_temperature_title">Temperature</string>
+    <string name="settings_endpoint_title">Endpoint</string>
+    <string name="settings_endpoint_placeholder">https://api.example.com/v1</string>
+    <string name="settings_model_placeholder">gpt-4o, claude-3-haiku, etc.</string>
+    <string name="settings_trigger_prefix_desc">Symbol used before command names (e.g., %1$sfix).</string>
+    <string name="settings_prefix_error_length">Must be exactly 1 character</string>
+    <string name="settings_prefix_error_whitespace">Cannot be whitespace</string>
+    <string name="settings_prefix_error_alphanumeric">Cannot be a letter or digit</string>
+    <string name="settings_endpoint_error_scheme">Use a valid https:// URL or a private-LAN http:// URL</string>
+    <string name="settings_endpoint_error_spaces">URL cannot contain spaces</string>
+    <string name="settings_endpoint_cleartext_warning" tools:ignore="MissingTranslation">HTTP is unencrypted. Use this endpoint only on a trusted private network.</string>
+
+    <!-- Backup -->
+    <string name="backup_desc">Export commands and safe preferences as JSON. API keys, endpoints, and local history are never included.</string>
+    <string name="backup_export">Export</string>
+    <string name="backup_import">Import</string>
+    <string name="backup_export_success">Commands exported successfully</string>
+    <string name="backup_export_error">Export failed</string>
+    <string name="backup_import_success">Commands imported successfully</string>
+    <string name="backup_import_error">Invalid backup file</string>
+    <string name="backup_import_confirm">This will replace your custom commands and update safe preferences. API keys and local history will not be imported. Continue?</string>
+    <string name="backup_import_cancel">Cancel</string>
+    <string name="secure_backup_title" tools:ignore="MissingTranslation">Encrypted API key export</string>
+    <string name="secure_backup_desc" tools:ignore="MissingTranslation">Export all configured provider keys with the selected model for each provider. The file is protected by a passphrase and is never included in standard backups.</string>
+    <string name="secure_backup_export" tools:ignore="MissingTranslation">Export keys</string>
+    <string name="secure_backup_import" tools:ignore="MissingTranslation">Import keys</string>
+    <string name="secure_backup_export_title" tools:ignore="MissingTranslation">Protect your export</string>
+    <string name="secure_backup_import_title" tools:ignore="MissingTranslation">Unlock your import</string>
+    <string name="secure_backup_passphrase_message" tools:ignore="MissingTranslation">Choose a portable passphrase for this file. SwiftSlate never stores it or sends it anywhere.</string>
+    <string name="secure_backup_passphrase_label" tools:ignore="MissingTranslation">Passphrase</string>
+    <string name="secure_backup_passphrase_hint" tools:ignore="MissingTranslation">At least 8 characters</string>
+    <string name="secure_backup_passphrase_short" tools:ignore="MissingTranslation">Use a passphrase of at least 8 characters.</string>
+    <string name="secure_backup_continue" tools:ignore="MissingTranslation">Continue</string>
+    <string name="secure_backup_chooser_message" tools:ignore="MissingTranslation">Choose whether to export or import your encrypted API key file.</string>
+    <string name="secure_backup_import_confirm_title" tools:ignore="MissingTranslation">Confirm encrypted import</string>
+    <string name="secure_backup_import_confirm_details" tools:ignore="MissingTranslation">This file contains %1$d API keys for %2$d providers and %3$d selected models.</string>
+    <string name="secure_backup_import_confirm" tools:ignore="MissingTranslation">Importing will replace the configured keys and selected models for the providers in this file. No network test will be run.</string>
+    <string name="secure_backup_export_success" tools:ignore="MissingTranslation">Encrypted API key export saved successfully.</string>
+    <string name="secure_backup_import_success" tools:ignore="MissingTranslation">Encrypted API key import completed.</string>
+    <string name="secure_backup_error" tools:ignore="MissingTranslation">The encrypted backup could not be read, unlocked, or saved.</string>
+    <string name="settings_check_updates">Check for updates</string>
+    <string name="settings_made_by">Made with love by JCVERSA, based on SwiftSlate by Musheer Alam</string>
+    <string name="settings_sponsor">Sponsor on GitHub</string>
+    <string name="commands_collapse">Collapse</string>
+    <string name="commands_expand">Expand</string>
+    <string name="commands_search_hint">Search commands…</string>
+    <string name="commands_search_close">Close search</string>
+    <string name="commands_search_empty">No commands found</string>
+    <string name="commands_history_title" tools:ignore="MissingTranslation">Command history</string>
+    <string name="commands_history_desc" tools:ignore="MissingTranslation">Saved locally on this device</string>
+    <string name="commands_history_disabled" tools:ignore="MissingTranslation">Enable local history in Settings to save results</string>
+    <string name="commands_history_empty" tools:ignore="MissingTranslation">No saved results yet. Successful commands will appear here when local history is enabled.</string>
+    <string name="commands_history_clear" tools:ignore="MissingTranslation">Clear all</string>
+    <string name="commands_history_delete" tools:ignore="MissingTranslation">Delete history entry</string>
+
+    <!-- Delete confirmation -->
+    <string name="delete_confirm_command_title">Delete this command?</string>
+    <string name="delete_confirm_key_title">Delete this API key?</string>
+    <string name="delete_confirm_message">This action cannot be undone.</string>
+    <string name="delete_confirm_button">Delete</string>
+
+    <!-- Runtime toasts (accessibility service) -->
+    <string name="toast_replace_failed">Could not replace text</string>
+    <string name="toast_custom_not_configured">Custom provider not configured. Set endpoint and model in Settings.</string>
+    <string name="toast_key_rate_limited">API key rate limited. Try again in %1$ds</string>
+    <string name="toast_no_keys">No API keys configured</string>
+    <string name="toast_all_keys_invalid">All API keys are invalid. Please check your keys</string>
+    <string name="toast_request_timed_out">Request timed out</string>
+
+    <!-- Text-selection (PROCESS_TEXT) flow -->
+    <string name="process_text_title">Apply a command</string>
+    <string name="process_text_replace">Replace</string>
+    <string name="process_text_copy">Copy</string>
+    <string name="process_text_back">Back</string>
+    <string name="process_text_retry">Retry</string>
+    <string name="process_text_copied">Copied</string>
+    <string name="process_text_no_selection">No text selected</string>
+    <string name="process_text_no_commands">No commands available. Add one in SwiftSlate.</string>
+    <string name="process_quick_actions" tools:ignore="MissingTranslation">Quick actions</string>
+    <string name="process_quick_fix" tools:ignore="MissingTranslation">Fix</string>
+    <string name="process_quick_improve" tools:ignore="MissingTranslation">Improve</string>
+    <string name="process_quick_shorten" tools:ignore="MissingTranslation">Shorten</string>
+    <string name="process_quick_formal" tools:ignore="MissingTranslation">Formal</string>
+    <string name="process_quick_casual" tools:ignore="MissingTranslation">Casual</string>
+    <string name="process_quick_reply" tools:ignore="MissingTranslation">Reply</string>
+    <string name="toast_restore_failed">Could not restore original text</string>
+    <string name="toast_nothing_to_undo">Nothing to undo</string>
+    <string name="toast_undo_failed">Could not undo</string>
+    <string name="toast_nothing_to_copy">Nothing to copy</string>
+    <string name="toast_copied">Copied to clipboard</string>
+    <string name="toast_nothing_to_cut">Nothing to cut</string>
+    <string name="toast_cut">Cut to clipboard</string>
+    <string name="toast_clipboard_empty">Clipboard is empty</string>
+    <string name="toast_clipboard_failed">Clipboard operation failed</string>
+
+    <!-- Runtime error messages (accessibility service) -->
+    <string name="error_no_model_access">Your API key doesn\'t have access to this model.</string>
+    <string name="error_invalid_key">Invalid API key. Please check your key in Settings.</string>
+    <string name="error_invalid_key_with_hint">Invalid API key (%1$s). Please check your keys in Settings.</string>
+    <string name="error_provider_auth_required">Your endpoint rejected the request. If it is a cloud-based server, sign in on the server itself (e.g. `ollama signin`).</string>
+    <string name="keys_endpoint_needs_v1">Endpoint is reachable, but the URL should end with /v1 (e.g. http://host:11434/v1).</string>
+    <string name="error_rate_limited">Rate limited. Try again shortly.</string>
+    <string name="error_model_not_found">Model not found. Check your model selection in Settings.</string>
+    <string name="error_safety_blocked">Response blocked by safety filters. Try rephrasing.</string>
+    <string name="error_empty_response">Model returned an empty response. Try again.</string>
+    <string name="error_timeout_connection">Request timed out. Check your connection.</string>
+    <string name="error_no_internet">No internet connection.</string>
+    <string name="error_endpoint_unreachable">Could not reach the API. Check your endpoint URL.</string>
+    <string name="error_bad_request">Request failed. Check your settings.</string>
+    <!-- TODO translate: new string, falls back to English in the other 40 locales until then.
+         Added because HTTP 413 was previously reported as "Rate limited. Try again shortly.",
+         which tells the user to wait when the fix is to select less text. -->
+    <string name="error_input_too_long">Text is too long for this model\'s per-minute token limit. Try again with shorter text.</string>
+    <string name="note_response_truncated">[Note: response may be cut off]</string>
+    <!-- Update notification (worker) -->
+    <string name="update_channel_name">App Updates</string>
+    <string name="update_channel_desc">Notifies when a new version of SwiftSlate is available</string>
+    <string name="update_available_title">SwiftSlate update available</string>
+    <string name="update_available_text">Tap to view the latest release</string>
+
+    <string name="settings_fetch_models">Fetch models</string>
+    <string name="settings_fetch_models_loading">Fetching…</string>
+    <string name="settings_fetch_models_success">%1$d models loaded</string>
+    <string name="settings_fetch_models_empty">No models found. You can still enter a model manually.</string>
+    <string name="settings_fetch_models_failed">Could not fetch models. Check your endpoint and API key.</string>
+    <string name="settings_models_refresh">Refresh</string>
+    <string name="settings_models_need_key">Add an API key above to load the model list.</string>
+    <string name="settings_models_load_failed">Couldn\'t load models. Check your connection and API key.</string>
+    <string name="settings_models_empty_provider">No models are available for this API key.</string>
+    <string name="dashboard_service_killed_title">SwiftSlate was interrupted</string>
+    <string name="dashboard_service_killed_message">The background service stopped unexpectedly. Re-enable it in accessibility settings to keep using commands.</string>
+    <string name="dashboard_service_killed_dismiss">Dismiss</string>
+
+    <!-- TODO translate: redesign labels, fall back to English in the other locales until then.
+         Added with the UI port: dashboard/keys/commands/settings subtitles, metric cards,
+         filter pills, command tags and section titles. Each carries
+         tools:ignore="MissingTranslation" so lint stays green — remove the attribute from
+         a string once its translations land. -->
+    <!-- Dashboard -->
+    <string name="dashboard_subtitle" tools:ignore="MissingTranslation">Your AI Writing Companion</string>
+    <string name="dashboard_cd_alert" tools:ignore="MissingTranslation">Alert</string>
+    <string name="dashboard_engine_status" tools:ignore="MissingTranslation">Engine Status</string>
+    <string name="dashboard_connected" tools:ignore="MissingTranslation">Connected</string>
+    <string name="dashboard_metric_actions" tools:ignore="MissingTranslation">Actions</string>
+    <string name="dashboard_cd_requests" tools:ignore="MissingTranslation">Requests</string>
+    <string name="dashboard_metric_integrations" tools:ignore="MissingTranslation">Integrations</string>
+    <string name="dashboard_metric_keys" tools:ignore="MissingTranslation">Configured Keys</string>
+    <string name="dashboard_cd_key_missing" tools:ignore="MissingTranslation">Key missing</string>
+    <string name="dashboard_configuration_title" tools:ignore="MissingTranslation">Configuration status</string>
+    <string name="dashboard_configuration_desc" tools:ignore="MissingTranslation">Review locally, then test only when you choose.</string>
+    <string name="dashboard_configuration_provider" tools:ignore="MissingTranslation">Provider</string>
+    <string name="dashboard_configuration_model" tools:ignore="MissingTranslation">Model</string>
+    <string name="dashboard_configuration_keys" tools:ignore="MissingTranslation">API keys</string>
+    <string name="dashboard_configuration_key_count" tools:ignore="MissingTranslation">%1$d configured</string>
+    <string name="dashboard_configuration_not_set" tools:ignore="MissingTranslation">Not configured</string>
+    <string name="dashboard_diagnostic_button" tools:ignore="MissingTranslation">Run configuration test</string>
+    <string name="dashboard_diagnostic_running" tools:ignore="MissingTranslation">Testing configuration…</string>
+    <string name="dashboard_diagnostic_success" tools:ignore="MissingTranslation">Configuration test passed.</string>
+    <string name="dashboard_diagnostic_failed" tools:ignore="MissingTranslation">Configuration test failed.</string>
+    <string name="dashboard_diagnostic_refused" tools:ignore="MissingTranslation">The provider refused the diagnostic request.</string>
+    <string name="dashboard_diagnostic_prompt" tools:ignore="MissingTranslation">Reply with the single word OK.</string>
+    <string name="dashboard_diagnostic_input" tools:ignore="MissingTranslation">SwiftSlate configuration diagnostic</string>
+    <string name="dashboard_chart_title" tools:ignore="MissingTranslation">Daily Usage Frequency</string>
+    <string name="dashboard_cd_chart" tools:ignore="MissingTranslation">Stats</string>
+    <!-- Keys -->
+    <string name="keys_subtitle" tools:ignore="MissingTranslation">Hardware-secured API authentication</string>
+    <string name="keys_register_title" tools:ignore="MissingTranslation">Register API Key</string>
+    <string name="keys_list_title" tools:ignore="MissingTranslation">Registered Keyrings</string>
+    <string name="keys_encrypted_note" tools:ignore="MissingTranslation">AES-256 Hardware Encrypted</string>
+    <!-- Commands -->
+    <string name="commands_subtitle" tools:ignore="MissingTranslation">Manage writing triggers &amp; custom shortcuts</string>
+    <string name="commands_filter_all" tools:ignore="MissingTranslation">All</string>
+    <string name="commands_filter_ai" tools:ignore="MissingTranslation">AI Actions</string>
+    <string name="commands_filter_replacer" tools:ignore="MissingTranslation">Text Replacers</string>
+    <string name="commands_empty_category" tools:ignore="MissingTranslation">No commands in this category</string>
+    <string name="commands_tag_ai" tools:ignore="MissingTranslation">AI ACTION</string>
+    <string name="commands_tag_replacer" tools:ignore="MissingTranslation">QUICK REPLACE</string>
+    <string name="commands_prompt_heading_ai" tools:ignore="MissingTranslation">AI ASSISTANT INSTRUCTION PROMPT:</string>
+    <string name="commands_prompt_heading_replacer" tools:ignore="MissingTranslation">REPLACEMENT TEXT:</string>
+    <string name="commands_edit_custom_title" tools:ignore="MissingTranslation">Edit Custom Command</string>
+    <!-- Settings -->
+    <string name="settings_subtitle" tools:ignore="MissingTranslation">Configure AI orchestration &amp; system settings</string>
+    <string name="settings_engine_title" tools:ignore="MissingTranslation">AI Service Engine</string>
+    <string name="settings_temperature_hint" tools:ignore="MissingTranslation">Higher value yields more creative results</string>
+    <string name="settings_prefix_title" tools:ignore="MissingTranslation">Trigger Activation Prefix</string>
+    <string name="settings_reliability_title" tools:ignore="MissingTranslation">Background reliability</string>
+    <string name="settings_reliability_desc" tools:ignore="MissingTranslation">Keep SwiftSlate ready after a restart. Android reconnects the accessibility service only when you have enabled it.</string>
+    <string name="settings_reliability_accessibility_needed" tools:ignore="MissingTranslation">Accessibility service is not enabled yet.</string>
+    <string name="settings_reliability_battery_needed" tools:ignore="MissingTranslation">Battery restrictions may stop SwiftSlate in the background.</string>
+    <string name="settings_reliability_ready" tools:ignore="MissingTranslation">Accessibility and battery settings look ready.</string>
+    <string name="settings_reliability_open_accessibility" tools:ignore="MissingTranslation">Enable accessibility</string>
+    <string name="settings_reliability_open_battery" tools:ignore="MissingTranslation">Open battery settings</string>
+    <string name="settings_privacy_title" tools:ignore="MissingTranslation">Privacy mode</string>
+    <string name="settings_privacy_desc" tools:ignore="MissingTranslation">Disable every AI network request. Local text replacers continue to work.</string>
+    <string name="settings_privacy_enabled" tools:ignore="MissingTranslation">Private: no text is sent to an AI provider.</string>
+    <string name="settings_privacy_disabled" tools:ignore="MissingTranslation">AI commands may use your configured provider.</string>
+    <string name="settings_typing_animation_title" tools:ignore="MissingTranslation">Typing animation</string>
+    <string name="settings_typing_animation_desc" tools:ignore="MissingTranslation">Reveal AI replacements progressively in the focused field.</string>
+    <string name="settings_history_title" tools:ignore="MissingTranslation">Optional local history</string>
+    <string name="settings_history_desc" tools:ignore="MissingTranslation">Keep successful command results on this device. Disabled by default.</string>
+    <string name="settings_history_retention" tools:ignore="MissingTranslation">Keep results for</string>
+    <string name="settings_history_days" tools:ignore="MissingTranslation">%1$d days</string>
+    <string name="settings_history_clear" tools:ignore="MissingTranslation">Clear history</string>
+    <string name="settings_history_clear_title" tools:ignore="MissingTranslation">Clear local history?</string>
+    <string name="settings_history_clear_message" tools:ignore="MissingTranslation">All saved command inputs and results will be removed from this device.</string>
+    <string name="privacy_mode_blocked" tools:ignore="MissingTranslation">Privacy mode is enabled. AI commands are blocked; local replacements still work.</string>
+    <string name="error_provider_selection_invalid" tools:ignore="MissingTranslation">The selected provider configuration is invalid. Choose a provider again in Settings before sending text.</string>
+    <string name="service_reliability_channel_name" tools:ignore="MissingTranslation">Service reliability</string>
+    <string name="service_reliability_channel_desc" tools:ignore="MissingTranslation">Alerts when SwiftSlate needs a system setting to stay available.</string>
+    <string name="service_reliability_notification_title" tools:ignore="MissingTranslation">Keep SwiftSlate available</string>
+    <string name="service_reliability_accessibility_message" tools:ignore="MissingTranslation">Enable SwiftSlate in Accessibility settings so it can reconnect after a restart.</string>
+    <string name="service_reliability_battery_message" tools:ignore="MissingTranslation">Allow SwiftSlate unrestricted background use so your phone does not stop it.</string>
+    <string name="service_reliability_open_accessibility" tools:ignore="MissingTranslation">Accessibility</string>
+    <string name="service_reliability_open_battery" tools:ignore="MissingTranslation">Battery</string>
+    <string name="settings_backup_title" tools:ignore="MissingTranslation">Backup &amp; Migration Vault</string>
+    <string name="settings_about_title" tools:ignore="MissingTranslation">About SwiftSlate</string>
+    <string name="settings_build_version" tools:ignore="MissingTranslation">Build v%1$s</string>
+    <string name="settings_sponsor_hint" tools:ignore="MissingTranslation">Support future development</string>
+    <!-- Dashboard: productivity odometer + sandbox (same TODO-translate terms as above) -->
+    <string name="dashboard_odometer_title" tools:ignore="MissingTranslation">Estimated Time Saved</string>
+    <string name="dashboard_odometer_hours" tools:ignore="MissingTranslation">%1$.1f Hrs</string>
+    <string name="dashboard_odometer_minutes" tools:ignore="MissingTranslation">%1$.0f Mins</string>
+    <string name="dashboard_odometer_basis" tools:ignore="MissingTranslation">Calculated on %1$d historical command runs</string>
+    <string name="dashboard_sandbox_title" tools:ignore="MissingTranslation">Interactive Playground</string>
+    <string name="dashboard_sandbox_badge" tools:ignore="MissingTranslation">SANDBOX</string>
+    <string name="dashboard_sandbox_desc" tools:ignore="MissingTranslation">Experience inline AI replacement. Tap the action button below to trigger typewriter expansion simulation instantly.</string>
+    <string name="dashboard_sandbox_editor" tools:ignore="MissingTranslation">LIVE EDITOR</string>
+    <string name="dashboard_sandbox_replacing" tools:ignore="MissingTranslation">Replacing…</string>
+    <string name="dashboard_sandbox_replaced" tools:ignore="MissingTranslation">Replaced</string>
+    <string name="dashboard_sandbox_demo_input" tools:ignore="MissingTranslation">/.formal Hey, can we meet tomorrow?</string>
+    <string name="dashboard_sandbox_demo_output" tools:ignore="MissingTranslation">I wanted to inquire if you might be available for a brief discussion tomorrow?</string>
+    <string name="dashboard_sandbox_expand" tools:ignore="MissingTranslation">Expand with AI</string>
+    <string name="dashboard_sandbox_reset" tools:ignore="MissingTranslation">Reset Demo</string>
+</resources>
