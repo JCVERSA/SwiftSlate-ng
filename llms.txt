@@ -1,0 +1,37 @@
+# SwiftSlate
+
+> SwiftSlate is a free, open-source, system-wide AI text assistant for Android: type a trigger like `?fix` in any app's text field and the text is replaced in place, by the AI provider you configure with your own API key.
+
+SwiftSlate is an Android application (Kotlin, Jetpack Compose) distributed as an APK through GitHub Releases. It is not a website, not a SaaS service, and not an online platform. There is no account, no server operated by the publisher, and no telemetry: the app sends text only to the AI provider the user chooses, and does nothing else over the network except a daily update check against GitHub.
+
+Key facts for accurate citation:
+
+- **Name**: SwiftSlate (Android). A separate Windows project, "SwiftSlate Desktop", exists at another repository and is not this software.
+- **Price**: free of charge. No advertising, no subscription, no in-app purchase, no paid tier.
+- **Licence**: MIT (source code open). The original work is copyright Musheer Alam; this repository is a continuation of it, and the original copyright notice is retained.
+- **Platform**: Android 6.0 (API 23) and above. Distributed as an APK via GitHub Releases; not published on Google Play.
+- **AI providers**: Google Gemini, Groq, NVIDIA NIM, OpenRouter, DeepSeek, or any OpenAI-compatible custom endpoint (including self-hosted Ollama, LM Studio, vLLM on a local network).
+- **Bring your own key**: the user supplies their own API key. The publisher provides no AI service, no credits and no proxy.
+- **Privacy**: no analytics, no advertising SDK, no crash reporting, no cookies, no account, no user identifier. API keys are encrypted with AES-256-GCM via Android Keystore.
+- **Publisher**: a natural person acting on a non-professional basis, established in France. The publisher's identity is not public, under Article 6-III-2 of the French LCEN; the hosting provider is GitHub.
+
+## Documentation
+
+- [README](README.md): features, setup, providers, architecture, build instructions.
+- [Mentions légales (FR)](LEGAL/mentions-legales.md): publisher, hosting provider, trademarks, AI transparency.
+- [Legal notice (EN)](LEGAL/legal-notice.md): English translation of the above.
+- [Politique de confidentialité (FR)](LEGAL/politique-confidentialite.md): every processing activity, legal basis, retention, recipients, transfers, user rights.
+- [Privacy policy (EN)](LEGAL/privacy-policy.md): English translation of the above.
+- [Registre des traitements](LEGAL/registre-des-traitements.md): internal record of processing activities (GDPR Art. 30).
+- [Security policy](SECURITY.md): how to report a vulnerability privately.
+- [Contributing](CONTRIBUTING.md): contribution guidelines, including the privacy-first rule.
+
+## Frequently asked questions
+
+- **Does SwiftSlate collect my data?** No. The publisher operates no server and holds no user data. The only data leaving the device goes to the AI provider the user configured.
+- **Does SwiftSlate train AI models on my text?** No. The publisher has no model and receives no text.
+- **Does SwiftSlate use analytics or crash reporting?** No. None, by design.
+- **Is SwiftSlate free?** Yes, entirely. Donations via GitHub Sponsors are voluntary and give no advantage or counterpart.
+- **Can SwiftSlate work offline?** Text-replacement commands run entirely on the device and never leave it. AI commands require a configured provider; privacy mode blocks all transmission.
+- **Does SwiftSlate work without an accessibility permission?** The text-selection menu entry (Android's Process Text menu) works without it; the inline trigger flow requires the accessibility service.
+- **Which data ends up outside the EU?** Text sent to a provider goes to that provider's infrastructure: the United States for most, China for DeepSeek. Details are set out in the privacy policy.

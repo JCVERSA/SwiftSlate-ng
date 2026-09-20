@@ -73,6 +73,7 @@ Type a trigger like **`?fix`** at the end of any text, in any app, and watch it 
 - [Contributing](#-contributing)
 - [Sponsors](#-sponsors)
 - [Support the Project](#-support-the-project)
+- [Legal](#%EF%B8%8F-legal)
 - [License](#-license)
 - [Star History](#-star-history)
 
@@ -753,6 +754,30 @@ SwiftSlate is free, open source, and built in my spare time. If it's useful to y
 
 - ⭐ **Star this repo** — it helps others discover SwiftSlate
 - 💖 [**Sponsor on GitHub**](https://github.com/sponsors/JCVERSA) — even a small contribution keeps the project going
+
+<br>
+
+## ⚖️ Legal
+
+SwiftSlate is published by a natural person acting on a **non-professional basis**, established in France, and hosted by GitHub. The app is free of charge, with no advertising, no analytics and no accounts; text is sent only to the AI provider you configure with your own key.
+
+| Document | Français (authoritative) | English |
+|:--|:--|:--|
+| Legal notice — publisher, hosting provider, third-party trademarks, AI transparency | [Mentions légales](LEGAL/mentions-legales.md) | [Legal notice](LEGAL/legal-notice.md) |
+| Privacy policy — processing activities, legal bases, retention, transfers, your rights | [Politique de confidentialité](LEGAL/politique-confidentialite.md) | [Privacy policy](LEGAL/privacy-policy.md) |
+| Record of processing activities (GDPR Art. 30) | [Registre des traitements](LEGAL/registre-des-traitements.md) | — |
+
+Where the two languages differ, **the French version prevails**.
+
+**Hosting provider** — required notice under French law (LCEN, art. 6-III): GitHub B.V., Prins Bernhardplein 200, 1097 JB Amsterdam, The Netherlands · GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, United States.
+
+**Contact** — jcversa16@gmail.com, for data protection requests (GDPR), legal questions, or security reports ([SECURITY.md](SECURITY.md)).
+
+**Non-affiliation** — SwiftSlate is an independent project. It is not approved, sponsored, affiliated or associated with Google, GitHub, Groq, NVIDIA, OpenRouter, DeepSeek, Ollama or LM Studio. All trademarks belong to their respective owners.
+
+There is **no cookie banner and no consent pop-up**, because the app sets no cookies, runs no analytics, and stores on your device only what it needs to work. The same documents are reachable from inside the app: **Settings → About SwiftSlate → Legal information**.
+
+The same factual summary is available to AI agents and crawlers in [`llms.txt`](llms.txt).
 
 <br>
 
