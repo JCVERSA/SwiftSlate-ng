@@ -351,4 +351,16 @@
     <string name="dashboard_sandbox_demo_output" tools:ignore="MissingTranslation">I wanted to inquire if you might be available for a brief discussion tomorrow?</string>
     <string name="dashboard_sandbox_expand" tools:ignore="MissingTranslation">Expand with AI</string>
     <string name="dashboard_sandbox_reset" tools:ignore="MissingTranslation">Reset Demo</string>
+
+    <!-- Legal information (French LCEN art. 6-III + GDPR art. 13). The full documents live in
+         LEGAL/ and are opened in the browser so that exactly one authoritative version exists,
+         in French, with an English translation. Every string here is marked MissingTranslation
+         because 43 locales ship but the legal text is deliberately only English + French. -->
+    <string name="settings_legal_title" tools:ignore="MissingTranslation">Legal information</string>
+    <string name="settings_legal_publisher" tools:ignore="MissingTranslation">Published by a natural person acting on a non-professional basis. Identity is held by the hosting provider and is not published (French LCEN, art. 6-III-2).</string>
+    <string name="settings_legal_host" tools:ignore="MissingTranslation">Hosting provider: GitHub B.V. · Prins Bernhardplein 200, 1097 JB Amsterdam, Netherlands</string>
+    <string name="settings_legal_ai_notice" tools:ignore="MissingTranslation">Text is sent only to the AI provider you configure — to nobody else. No account, no analytics, no tracking.</string>
+    <string name="settings_legal_contact" tools:ignore="MissingTranslation">Contact: jcversa16@gmail.com</string>
+    <string name="settings_legal_notice_link" tools:ignore="MissingTranslation">Legal notice</string>
+    <string name="settings_legal_privacy_link" tools:ignore="MissingTranslation">Privacy policy</string>
 </resources>

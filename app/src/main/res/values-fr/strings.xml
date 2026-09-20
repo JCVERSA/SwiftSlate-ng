@@ -266,4 +266,14 @@
     <string name="dashboard_diagnostic_refused">Le fournisseur a refusé la requête de diagnostic.</string>
     <string name="dashboard_diagnostic_prompt">Répondez avec le seul mot OK.</string>
     <string name="dashboard_diagnostic_input">Diagnostic de configuration SwiftSlate</string>
+
+    <!-- Informations légales (LCEN art. 6-III et RGPD art. 13). Les documents complets sont
+         dans LEGAL/ et s'ouvrent dans le navigateur : une seule version fait foi, en français. -->
+    <string name="settings_legal_title">Informations légales</string>
+    <string name="settings_legal_publisher">Publié par une personne physique agissant à titre non professionnel. Son identité est détenue par l\'hébergeur et n\'est pas publiée (LCEN, art. 6-III-2).</string>
+    <string name="settings_legal_host">Hébergeur : GitHub B.V. · Prins Bernhardplein 200, 1097 JB Amsterdam, Pays-Bas</string>
+    <string name="settings_legal_ai_notice">Le texte n\'est envoyé qu\'au fournisseur d\'IA que vous configurez, et à personne d\'autre. Aucun compte, aucune mesure d\'audience, aucun traçage.</string>
+    <string name="settings_legal_contact">Contact : jcversa16@gmail.com</string>
+    <string name="settings_legal_notice_link">Mentions légales</string>
+    <string name="settings_legal_privacy_link">Politique de confidentialité</string>
 </resources>

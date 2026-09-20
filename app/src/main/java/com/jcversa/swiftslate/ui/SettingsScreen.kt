@@ -1654,7 +1654,7 @@ fun SettingsScreen(
                 }
 
                 Surface(
-                    onClick = { uriHandler.openUri("https://github.com/JCVERSA/swiftslate/releases/latest") },
+                    onClick = { uriHandler.openUri("https://github.com/JCVERSA/SwiftSlate-ng/releases/latest") },
                     shape = RoundedCornerShape(12.dp),
                     color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.2f),
                     border = androidx.compose.foundation.BorderStroke(
@@ -1749,6 +1749,139 @@ fun SettingsScreen(
             }
         }
     }
+        // Card 5: legal information.
+        //
+        // Not decorative. The service is published from France, so the hosting provider's
+        // identity has to be reachable from the product itself (LCEN art. 6-III), and the
+        // information owed to data subjects (GDPR art. 13) cannot live only in the repository.
+        // The documents stay in LEGAL/ and open in the browser, so one authoritative French
+        // text exists with an English translation, rather than a 43-locale copy that would
+        // silently drift out of date. The locale picks the language of the document.
+        val legalIsFrench = java.util.Locale.getDefault().language == "fr"
+        val legalDocsBase = "https://github.com/JCVERSA/SwiftSlate-ng/blob/main/LEGAL"
+        val legalNoticeUrl = "$legalDocsBase/" +
+            (if (legalIsFrench) "mentions-legales.md" else "legal-notice.md")
+        val privacyPolicyUrl = "$legalDocsBase/" +
+            (if (legalIsFrench) "politique-confidentialite.md" else "privacy-policy.md")
+
+        Spacer(modifier = Modifier.height(rhythm.cardGap))
+
+        AnimateEntrance(index = 8) {
+            SlateCard {
+                Column(modifier = Modifier.padding(2.dp)) {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.padding(bottom = 12.dp)
+                    ) {
+                        Icon(
+                            imageVector = Icons.Rounded.Security,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.primary,
+                            modifier = Modifier.size(18.dp)
+                        )
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text(
+                            text = stringResource(R.string.settings_legal_title),
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 14.sp,
+                            color = MaterialTheme.colorScheme.onSurface
+                        )
+                    }
+
+                    Text(
+                        text = stringResource(R.string.settings_legal_publisher),
+                        fontSize = 11.sp,
+                        lineHeight = 15.sp,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    Spacer(modifier = Modifier.height(6.dp))
+                    Text(
+                        text = stringResource(R.string.settings_legal_host),
+                        fontSize = 11.sp,
+                        lineHeight = 15.sp,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    Spacer(modifier = Modifier.height(6.dp))
+                    Text(
+                        text = stringResource(R.string.settings_legal_ai_notice),
+                        fontSize = 11.sp,
+                        lineHeight = 15.sp,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    Spacer(modifier = Modifier.height(6.dp))
+                    Text(
+                        text = stringResource(R.string.settings_legal_contact),
+                        fontSize = 11.sp,
+                        lineHeight = 15.sp,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+
+                    Spacer(modifier = Modifier.height(10.dp))
+
+                    Surface(
+                        onClick = { uriHandler.openUri(legalNoticeUrl) },
+                        shape = RoundedCornerShape(12.dp),
+                        color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.2f),
+                        border = androidx.compose.foundation.BorderStroke(
+                            1.dp,
+                            MaterialTheme.colorScheme.outline.copy(alpha = 0.1f)
+                        ),
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Row(
+                            modifier = Modifier.padding(horizontal = 14.dp, vertical = 12.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.SpaceBetween
+                        ) {
+                            Text(
+                                text = stringResource(R.string.settings_legal_notice_link),
+                                fontSize = 13.sp,
+                                fontWeight = FontWeight.Medium,
+                                color = MaterialTheme.colorScheme.onSurface
+                            )
+                            Icon(
+                                imageVector = Icons.Rounded.OpenInNew,
+                                contentDescription = null,
+                                tint = MaterialTheme.colorScheme.primary,
+                                modifier = Modifier.size(14.dp)
+                            )
+                        }
+                    }
+
+                    Spacer(modifier = Modifier.height(8.dp))
+
+                    Surface(
+                        onClick = { uriHandler.openUri(privacyPolicyUrl) },
+                        shape = RoundedCornerShape(12.dp),
+                        color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.2f),
+                        border = androidx.compose.foundation.BorderStroke(
+                            1.dp,
+                            MaterialTheme.colorScheme.outline.copy(alpha = 0.1f)
+                        ),
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Row(
+                            modifier = Modifier.padding(horizontal = 14.dp, vertical = 12.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.SpaceBetween
+                        ) {
+                            Text(
+                                text = stringResource(R.string.settings_legal_privacy_link),
+                                fontSize = 13.sp,
+                                fontWeight = FontWeight.Medium,
+                                color = MaterialTheme.colorScheme.onSurface
+                            )
+                            Icon(
+                                imageVector = Icons.Rounded.OpenInNew,
+                                contentDescription = null,
+                                tint = MaterialTheme.colorScheme.primary,
+                                modifier = Modifier.size(14.dp)
+                            )
+                        }
+                    }
+                }
+            }
+        }
     }
 
     if (showClearHistoryConfirm) {
