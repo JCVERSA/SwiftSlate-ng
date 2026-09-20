@@ -27,12 +27,13 @@ class UpdateCheckWorker(
         const val CHANNEL_ID = "update_channel"
         private const val NOTIFICATION_ID = 9001
         private const val MAX_RESPONSE_CHARS = 1_048_576
+        private const val HTTP_NOT_FOUND = 404
         private const val PREFS_NAME = "update_check"
         private const val KEY_LAST_NOTIFIED_VERSION = "last_notified_version"
         private const val GITHUB_API_URL =
-            "https://api.github.com/repos/JCVERSA/swiftslate/releases/latest"
+            "https://api.github.com/repos/JCVERSA/SwiftSlate-ng/releases/latest"
         private const val RELEASES_URL =
-            "https://github.com/JCVERSA/swiftslate/releases/latest"
+            "https://github.com/JCVERSA/SwiftSlate-ng/releases/latest"
 
         /**
          * Compares dot-separated versions (e.g. "1.0.50" > "1.0.49").
@@ -98,6 +99,12 @@ class UpdateCheckWorker(
             connection.connectTimeout = 15_000
             connection.readTimeout = 15_000
 
+            // 404 means the repository exists but has published no release yet — the normal
+            // state right after the update check is repointed at another repository. Retrying
+            // would never change that outcome, so it is reported as "no release" by returning
+            // an empty object, which the caller turns into a silent success. Any other non-200
+            // (rate limit, transient server error) still returns null and is retried.
+            if (connection.responseCode == HTTP_NOT_FOUND) return JSONObject()
             if (connection.responseCode != 200) return null
 
             // Bounded read — avoids unbounded memory usage on unexpectedly large responses
