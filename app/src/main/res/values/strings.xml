@@ -363,4 +363,11 @@
     <string name="settings_legal_contact" tools:ignore="MissingTranslation">Contact: jcversa16@gmail.com</string>
     <string name="settings_legal_notice_link" tools:ignore="MissingTranslation">Legal notice</string>
     <string name="settings_legal_privacy_link" tools:ignore="MissingTranslation">Privacy policy</string>
+
+    <!-- The URLs are resources, not constants in code: the document that opens must be the one
+         in the reader's language, and resolving that through values-fr/ keeps it correct across
+         a language change. translatable="false" so translators never touch a URL; the French
+         pair lives in values-fr/ and every other locale falls back to these. -->
+    <string name="settings_legal_notice_url" translatable="false">https://github.com/JCVERSA/SwiftSlate-ng/blob/main/LEGAL/legal-notice.md</string>
+    <string name="settings_legal_privacy_url" translatable="false">https://github.com/JCVERSA/SwiftSlate-ng/blob/main/LEGAL/privacy-policy.md</string>
 </resources>

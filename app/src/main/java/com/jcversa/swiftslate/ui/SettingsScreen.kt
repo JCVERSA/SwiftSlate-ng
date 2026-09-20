@@ -1754,15 +1754,14 @@ fun SettingsScreen(
         // Not decorative. The service is published from France, so the hosting provider's
         // identity has to be reachable from the product itself (LCEN art. 6-III), and the
         // information owed to data subjects (GDPR art. 13) cannot live only in the repository.
+        //
         // The documents stay in LEGAL/ and open in the browser, so one authoritative French
-        // text exists with an English translation, rather than a 43-locale copy that would
-        // silently drift out of date. The locale picks the language of the document.
-        val legalIsFrench = java.util.Locale.getDefault().language == "fr"
-        val legalDocsBase = "https://github.com/JCVERSA/SwiftSlate-ng/blob/main/LEGAL"
-        val legalNoticeUrl = "$legalDocsBase/" +
-            (if (legalIsFrench) "mentions-legales.md" else "legal-notice.md")
-        val privacyPolicyUrl = "$legalDocsBase/" +
-            (if (legalIsFrench) "politique-confidentialite.md" else "privacy-policy.md")
+        // text exists with an English translation, rather than a copy in each of the 43 shipped
+        // locales. Which text opens is decided by the resource system, not by a runtime locale
+        // read: the URLs live in string resources (French ones in values-fr/), so they follow a
+        // language change on their own and no locale is read inside a composable.
+        val legalNoticeUrl = stringResource(R.string.settings_legal_notice_url)
+        val privacyPolicyUrl = stringResource(R.string.settings_legal_privacy_url)
 
         Spacer(modifier = Modifier.height(rhythm.cardGap))
 

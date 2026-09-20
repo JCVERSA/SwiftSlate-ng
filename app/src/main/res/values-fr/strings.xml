@@ -276,4 +276,9 @@
     <string name="settings_legal_contact">Contact : jcversa16@gmail.com</string>
     <string name="settings_legal_notice_link">Mentions légales</string>
     <string name="settings_legal_privacy_link">Politique de confidentialité</string>
+
+    <!-- Les documents français qui font foi. Les autres langues retombent sur les URL
+         anglaises de values/strings.xml. -->
+    <string name="settings_legal_notice_url" translatable="false">https://github.com/JCVERSA/SwiftSlate-ng/blob/main/LEGAL/mentions-legales.md</string>
+    <string name="settings_legal_privacy_url" translatable="false">https://github.com/JCVERSA/SwiftSlate-ng/blob/main/LEGAL/politique-confidentialite.md</string>
 </resources>
